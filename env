@@ -1,2 +1,2 @@
-let REACT_APP_API_URL = "arturchik.pythonanywhere.com";
+let REACT_APP_API_URL = "https://arturchik.pythonanywhere.com";
 export default REACT_APP_API_URL;
