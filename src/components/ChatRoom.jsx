@@ -49,7 +49,7 @@ const ChatRoom = ({ roomId, user, onLeave }) => {
   }
 
   return (
-    <div className="flex flex-col h-full max-w-4xl mx-auto">
+    <div className="flex flex-col h-full w-full mx-auto">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Room: {roomId}</h2>
         <button
@@ -62,14 +62,15 @@ const ChatRoom = ({ roomId, user, onLeave }) => {
       
       {error && <div className="mb-4 p-2 bg-red-100 text-red-700 rounded">{error}</div>}
       
-      <div className="flex flex-col flex-1 bg-white rounded-lg shadow-lg p-4">
-        <MessageList 
-          messages={messages} 
-          currentUser={user} 
-          onDelete={handleDelete} 
-        />
-        
-        <div className="mt-4">
+      <div className="flex flex-col flex-1 bg-white rounded-lg shadow-lg">
+        <div>
+          <MessageList 
+            messages={messages} 
+            currentUser={user} 
+            onDelete={handleDelete} 
+          />
+        </div>
+        <div>
           <MessageForm user={user} roomId={roomId} onSubmit={handleSend} />
         </div>
       </div>

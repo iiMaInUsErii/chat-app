@@ -13,7 +13,7 @@ const MessageList = ({ messages, currentUser, onDelete }) => {
   }, [messages]);
 
   return (
-    <div className="flex-1 overflow-y-auto p-4 bg-gray-50 rounded-lg mb-4">
+    <div className="flex-1 overflow-y-auto p-4 rounded-lg">
       {messages.length === 0 ? (
         <div className="text-center text-gray-500 py-10">
           No messages yet. Be the first to send a message!

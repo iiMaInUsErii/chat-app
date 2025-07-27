@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { checkRoom, createRoom } from '../services/api';
 
 const RoomLogin = ({ onJoin }) => {
@@ -7,6 +7,10 @@ const RoomLogin = ({ onJoin }) => {
   const [user, setUser] = useState('');
   const [error, setError] = useState('');
   const [isCreating, setIsCreating] = useState(false);
+
+  useEffect(() => {
+    window.document.title = 'Log in'
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

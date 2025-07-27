@@ -9,7 +9,7 @@ const Message = ({ message, currentUser, onDelete }) => {
   const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   const ext = (message.text).split(".")[(message.text).split(".").length - 1].toLowerCase()
 
-  const getFileIcon = (filename) => {
+  const getFileIcon = () => {
   if (['png', 'jpg', 'jpeg', 'gif'].includes(ext)) return <FaFileImage className="mr-1" />;
   if (ext === 'pdf') return <FaFilePdf className="mr-1" />;
   return <FaFileAlt className="mr-1" />;
