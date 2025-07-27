@@ -70,7 +70,7 @@ const ChatRoom = ({ roomId, user, onLeave }) => {
         />
         
         <div className="mt-4">
-          <MessageForm onSubmit={handleSend} />
+          <MessageForm user={user} roomId={roomId} onSubmit={handleSend} />
         </div>
       </div>
     </div>
